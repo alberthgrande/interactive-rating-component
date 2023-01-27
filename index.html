@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Rating state start -->
+      <div class="rating-state">
+        <div class="rating-state_img">
+          <img
+            class="rating-state_icon"
+            src="./images/icon-star.svg"
+            alt="icon-star"
+          />
+        </div>
+        <h1 class="rating-state_header">How did we do?</h1>
+        <p class="rating-state_info">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <button class="rating-state_rate" id="one">1</button>
+        <button class="rating-state_rate" id="two">2</button>
+        <button class="rating-state_rate" id="three">3</button>
+        <button class="rating-state_rate" id="four">4</button>
+        <button class="rating-state_rate" id="five">5</button>
+        <button class="rating-state_rate" id="submit">Submit</button>
+      </div>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <div class="thankyou-state">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="illustration-thank-you"
+        />
+        <!-- Add rating here -->
+        <p class="thankyou-state_rating">
+          You selected <span id="thankyou-state_rate">4</span> out of 5
+        </p>
+        <h1 class="thankyou-state_header">Thank you!</h1>
+        <p class="thankyou-state_info">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <!-- Thank you state end -->
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>

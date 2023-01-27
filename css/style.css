@@ -12,7 +12,7 @@
   --primary-orange: hsl(25, 97%, 53%);
 
   --neutral-white: hsl(0, 0%, 100%);
-  --neutral-light-grey: hsl(217, 12%, 63%);
+  --neutral-light-grey: hsl(216deg 8% 24%);
   --neutral-medium-grey: hsl(216, 12%, 54%);
   --neutral-dark-blue: hsl(213, 19%, 18%);
   --neutral-very-dark-blue: hsl(216, 12%, 8%);
@@ -20,27 +20,42 @@
 
 body {
   background-color: var(--neutral-very-dark-blue);
+  position: relative;
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0px 10px 0px 0px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 15%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: var(--neutral-dark-blue);
   color: var(--neutral-white);
-  max-width: 450px;
+  max-width: 380px;
   padding: 2rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 /* .rating-state img */
+
+.rating-state {
+  /* display: none; */
+}
+
+.rating-state .rating-state_header {
+  margin: 1rem 0;
+  font-size: 24px;
+  font-weight: 700;
+}
 .rating-state .rating-state_img {
-  background-color: var(--neutral-medium-grey);
+  background-color: var(--neutral-light-grey);
   height: 40px;
   width: 40px;
-  /* text-align: center; */
+  text-align: center;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -50,16 +65,34 @@ body {
 /* .rating-state p */
 .rating-state .rating-state_info {
   font-size: 15px;
+  margin: 10px 0px;
 }
 
 /* .rating-state button */
+.rating-state .rating-state_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.3rem;
+}
 .rating-state .rating-state_rate {
-  background-color: white;
-  height: 40px;
-  width: 40px;
-  /* text-align: center; */
+  background-color: var(--neutral-light-grey);
+  color: var(--neutral-white);
+  height: 50px;
+  width: 50px;
+  text-align: center;
   border-radius: 50%;
   border: none;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .rating-state .rating-state_rate {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .rating-state .rating-state_rate:hover {
@@ -68,10 +101,55 @@ body {
 }
 
 .rating-state #submit {
+  background-color: var(--primary-orange);
   display: block;
+  margin: 1.3rem auto;
+  border-radius: 30px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.rating-state #submit:hover {
+  background-color: var(--neutral-white);
+  color: var(--primary-orange);
 }
 
 /* thankyou state */
 .thankyou-state {
+  width: 100%;
   display: none;
+}
+
+.thankyou-state .thankyou-state_svg {
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 0px;
+}
+
+.thankyou-state .thankyou-state_rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--neutral-light-grey);
+  border-radius: 30px;
+  color: var(--primary-orange);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 0px;
+}
+
+.thankyou-state #thankyou-state_rate {
+  margin: 0px 5px;
+}
+
+.thankyou-state .thankyou-state_header {
+  text-align: center;
+  padding: 1rem 0px;
+  font-size: 20px;
+}
+.thankyou-state .thankyou-state_info {
+  text-align: center;
+  font-size: 15px;
 }

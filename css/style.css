@@ -21,14 +21,26 @@
 body {
   background-color: var(--neutral-very-dark-blue);
   position: relative;
+  height: 100vh;
 }
 
+.attribution {
+  position: relative;
+  text-align: center;
+  margin: 8rem 0px;
+  color: var(--neutral-white);
+}
+
+.attribution a {
+  display: block;
+  color: var(--primary-orange);
+}
 .container {
   margin: 0px 10px 0px 0px;
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 15%);
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,6 +125,8 @@ body {
 .rating-state #submit:hover {
   background-color: var(--neutral-white);
   color: var(--primary-orange);
+  font-weight: 700;
+  font-size: 16px;
 }
 
 /* thankyou state */

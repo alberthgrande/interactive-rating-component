@@ -54,8 +54,9 @@ body {
 
 /* .rating-state img */
 
-.rating-state {
-  /* display: none; */
+#rate.selected {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(216, 12%, 8%);
 }
 
 .rating-state .rating-state_header {
